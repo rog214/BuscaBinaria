@@ -1,0 +1,124 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	font-family: Arial, Helvetica, sans-serif;
+	align-items: center;
+	justify-content: center;
+	background-image: url(assets/background4.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.main-card {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 450px;
+	width: 400px;
+	background-color: rgba(0, 0, 0, 0.35);
+	text-align: center;
+	border: 1px solid rgba(255, 255, 255, 0.189);
+	border-radius: 5px;
+	color: white;
+	align-items: center;
+}
+.main-card img {
+	max-width: 100%;
+	max-height: 200px;
+	height: auto;
+	width: auto;
+	position: absolute;
+	top: 100px;
+}
+h1 {
+	margin: 1em auto;
+	border-bottom: 1px solid white;
+	width: max-content;
+}
+
+.card {
+	display: flex;
+	width: 100%;
+	margin-bottom: 3.5em;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+.input {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+#guessInput {
+	font-size: 20px;
+	width: 3em;
+	height: 40px;
+	border-radius: 5px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+button {
+	height: 3em;
+	width: 8em;
+	font-weight: 600;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: ease-in-out 0.5s;
+}
+button:hover {
+	background-color: #111;
+	color: white;
+}
+#output {
+	padding: 10px 1px;
+	width: 85%;
+	position: absolute;
+	bottom: 0;
+}
+.maior {
+	color: rgb(41, 224, 41);
+	font-weight: bold;
+	border-bottom: 1px solid rgb(41, 224, 41);
+}
+
+.menor {
+	color: rgb(255, 60, 60);
+	font-weight: bold;
+	border-bottom: 1px solid rgb(255, 60, 60);
+}
+.acertou {
+	color: rgb(98, 98, 255);
+	font-weight: bold;
+	border-bottom: 1px solid white;
+}
+
+@media screen and (max-width: 600px) {
+	.main-card {
+		width: 90vw; 
+		height: 80vh; 
+	}
+
+	.main-card img {
+        position: static;
+		max-height: 200px;
+	}
+
+	.card {
+		margin-bottom: 5em; 
+	}
+
+	#output {
+		width: 90%; 
+	}
+}
