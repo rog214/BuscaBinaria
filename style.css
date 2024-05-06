@@ -105,20 +105,20 @@ button:hover {
 
 @media screen and (max-width: 600px) {
 	.main-card {
-		width: 90vw; 
-		height: 80vh; 
+		width: 90vw;
+		height: 70%;
 	}
 
 	.main-card img {
-        position: static;
+		position: static;
 		max-height: 200px;
 	}
 
 	.card {
-		margin-bottom: 5em; 
+		margin-bottom: 5em;
 	}
 
 	#output {
-		width: 90%; 
+		width: 90%;
 	}
 }
