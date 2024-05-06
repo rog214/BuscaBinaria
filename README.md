@@ -2,11 +2,13 @@
 
 
 ### Um divertido jogo de adivinhação onde você tenta descobrir um número secreto escolhido aleatoriamente pelo computador.
-![Preview]([assets/Preview/1.png])
-![Preview]([assets/Preview/2.png])
-![Preview]([assets/Preview/3.png])
-![Preview]([assets/Preview/4.png])
-![Preview]([assets/Preview/5mobile])
+
+<img src="https://github.com/rog214/BuscaBinaria/assets/94937435/975db7d7-adaf-4513-a344-b691e087613f" alt="imagem do layout do jogo" width="300" height="400">
+<img src="https://github.com/rog214/BuscaBinaria/assets/94937435/cdf3c9eb-8955-4740-b25e-2290726a370f" alt="entrada green" width="300" height="400">
+<img src="https://github.com/rog214/BuscaBinaria/assets/94937435/c689b27f-6a8c-407f-b75f-40875cbbbb06" alt="entrada red" width="300" height="400">
+<img src="https://github.com/rog214/BuscaBinaria/assets/94937435/3b53493a-a741-481a-8b47-b3f5501624e5" alt="acertando o numero" width="300" height="400">
+<img src="https://github.com/rog214/BuscaBinaria/assets/94937435/c4c2b6a0-b440-4bd7-90a6-553201fc9bcd" alt="jogo no mobile" width="300" height="400">
+
 
 ## Como Jogar
 
