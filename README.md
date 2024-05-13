@@ -12,8 +12,8 @@
 
 ## Como Jogar
 
-1. Abra o arquivo `index.html` em um navegador da web.
-2. Insira um número entre 1 e 1000 no campo de entrada.
+1. Clone o repositório e abra o arquivo `index.html` em um navegador da web. OU acesse: https://rog214.github.io/BuscaBinaria/
+2. Insira um número entre 1 e 100 no campo de entrada.
 3. Pressione o botão "Enviar Palpite".
 4. O programa fornecerá feedback se o número inserido é maior, menor ou igual ao número secreto.
 5. Continue adivinhando até acertar o número secreto.
