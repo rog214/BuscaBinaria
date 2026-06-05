@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adivinhe o Número</title>
+    <link rel="preload" as="image" href="assets/background4.jpg">
     <link rel="stylesheet" href="style.css">
     <script src="program.js" defer></script>
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-
 </head>
 
 <body>
@@ -18,10 +18,11 @@
         <div class="card">
             <p>Tente adivinhar o número entre 1 e 100:</p>
             <div class="input">
-                <input type="number" id="guessInput">
-                <button onclick="checkAttempt()">Enviar Palpite</button>
+                <input type="number" id="inputPalpite">
+                <button id="botaoEnviar" onclick="verificarPalpite()">Enviar Palpite</button>
+                <button id="botaoReiniciar" onclick="reiniciarJogo()" style="display: none;">Jogar Novamente</button>
             </div>
-            <div id="output"></div>
+            <div id="resultado"></div>
         </div>
 
     </div>

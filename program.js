@@ -1,25 +1,60 @@
-let randomNumber = Math.floor(Math.random() * 100) + 1;
-let attempts = 0;
+let numeroSecreto = Math.floor(Math.random() * 100) + 1;
+let tentativas = 0;
 
-function checkAttempt() {
-    let guessInput = document.getElementById("guessInput");
-    let guess = parseInt(guessInput.value);
-    let output = document.getElementById("output");
+document.addEventListener('DOMContentLoaded', () => {
+    const inputPalpite = document.getElementById("inputPalpite");
+    inputPalpite.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            verificarPalpite();
+        }
+    });
+    inputPalpite.focus();
+});
 
-    if (isNaN(guess) || guess < 1 || guess > 100) {
-        output.textContent = "Por favor, insira um número válido entre 1 e 100.";
+function verificarPalpite() {
+    let inputPalpite = document.getElementById("inputPalpite");
+    let palpite = parseInt(inputPalpite.value);
+    let resultado = document.getElementById("resultado");
+    let botaoEnviar = document.getElementById("botaoEnviar");
+    let botaoReiniciar = document.getElementById("botaoReiniciar");
+
+    if (isNaN(palpite) || palpite < 1 || palpite > 100) {
+        resultado.textContent = "Por favor, insira um número válido entre 1 e 100.";
         return;
     }
 
-    attempts++;
+    tentativas++;
 
-    if (guess === randomNumber) {
-        output.innerHTML = `<span class="acertou">Parabéns! Você acertou!</span> O número secreto é ${randomNumber} e você acertou em ${attempts} tentativas.`;
-    } else if (guess < randomNumber) {
-        output.innerHTML = `O número que estou pensando é <span class="maior">maior</span> que ${guess}. Tente novamente.`;
+    if (palpite === numeroSecreto) {
+        resultado.innerHTML = `<span class="acertou">Parabéns! Você acertou!</span> O número secreto é ${numeroSecreto} e você acertou em ${tentativas} tentativas.`;
+        inputPalpite.style.display = 'none';
+        botaoEnviar.style.display = 'none';
+        botaoReiniciar.style.display = 'block';
+    } else if (palpite < numeroSecreto) {
+        resultado.innerHTML = `O número que estou pensando é <span class="maior">maior</span> que ${palpite}. Tente novamente.`;
+        inputPalpite.value = "";
+        inputPalpite.focus();
     } else {
-        output.innerHTML = `O número que estou pensando é <span class="menor">menor</span> que ${guess}. Tente novamente.`;
+        resultado.innerHTML = `O número que estou pensando é <span class="menor">menor</span> que ${palpite}. Tente novamente.`;
+        inputPalpite.value = "";
+        inputPalpite.focus();
     }
+}
 
-    guessInput.value = "";
+function reiniciarJogo() {
+    numeroSecreto = Math.floor(Math.random() * 100) + 1;
+    tentativas = 0;
+    
+    let inputPalpite = document.getElementById("inputPalpite");
+    let resultado = document.getElementById("resultado");
+    let botaoEnviar = document.getElementById("botaoEnviar");
+    let botaoReiniciar = document.getElementById("botaoReiniciar");
+
+    resultado.innerHTML = "";
+    inputPalpite.value = "";
+    inputPalpite.style.display = 'inline-block';
+    botaoEnviar.style.display = 'inline-block';
+    botaoReiniciar.style.display = 'none';
+    
+    inputPalpite.focus();
 }
